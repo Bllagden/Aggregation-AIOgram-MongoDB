@@ -1,0 +1,33 @@
+[project]
+name = "MongoDB_1"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "Bllagden", email = "bllagden99@gmail.com"},
+]
+dependencies = [
+    "pymongo[srv]>=4.6.2",
+    "motor>=3.3.2",
+    "ujson>=5.9.0",
+    "aiofiles>=23.2.1",
+    "python-dotenv>=1.0.1",
+    "pydantic-settings>=2.2.1",
+    "aiogram>=3.4.1",
+]
+requires-python = "==3.11.*"
+readme = "README.md"
+license = {text = "MIT"}
+
+
+[tool.pdm]
+package-type = "application"
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "ruff>=0.3.3",
+    "black>=24.3.0",
+    "isort>=5.13.2",
+]
+
+[tool.isort]
+profile = "black"
