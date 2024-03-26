@@ -18,7 +18,7 @@ async def process_json(message: Message, bot: Bot):
             data["dt_upto"],
             data["group_type"],
         )
-        await bot.send_message(message.chat.id, str(results))
+        await bot.send_message(message.chat.id, str(results).replace("'", '"'))
     except Exception as e:
         try:
             await bot.send_message(
